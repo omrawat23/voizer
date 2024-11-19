@@ -8,7 +8,7 @@
 The API returned an empty array (`[]`) when attempting to fetch the list of agents.
 
 ### Screenshot of the Response:
-![List Agents Response](./public/listagent.png)
+![List Agents Response](./public/listagent.PNG)
 
 ### Workaround:
 To proceed, I used dummy data for agents during testing and development.
@@ -23,7 +23,7 @@ To proceed, I used dummy data for agents during testing and development.
 The API returned a `400 Bad Request` with the error message:
 
 ### Screenshot of the Response:
-![List Agents Response](./public/createagent.png)
+![Create Agents Response](./public/createagent.PNG)
 
 ```json
 {
