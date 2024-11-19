@@ -3,7 +3,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-// Define the store interface
 interface AgentStore {
   agentName: string;
   prompt: string;
@@ -21,7 +20,6 @@ interface AgentStore {
   }) => void;
 }
 
-// Create the Zustand store with persistence
 const useAgentStore = create<AgentStore>()(
   persist(
     (set) => ({

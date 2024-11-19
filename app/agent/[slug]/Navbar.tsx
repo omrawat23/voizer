@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 h-16 bg-blue-600 dark:bg-black border-b border-border z-50">
       <div className="flex h-full items-center justify-between px-4">
-        {/* Left Section: Back Button */}
+        {/* Left Section */}
         <Button
           variant="ghost"
           className="flex items-center gap-2"
@@ -44,7 +44,7 @@ export default function Navbar() {
           <span>Back</span>
         </Button>
 
-        {/* Center Section: Avatar, Input, ThemeToggle */}
+        {/* Center Section */}
         <div className="flex items-center gap-4 flex-1 justify-center">
           <Avatar className="h-8 w-8">
             <AvatarImage src={agent.avatar} alt={agentName} />
@@ -58,8 +58,6 @@ export default function Navbar() {
           
         </div>
 
-        {/* Right Section: Placeholder for spacing */}
-        <div className="w-[100px]" /> {/* Spacer to balance the layout */}
         <ThemeToggle />
       </div>
     </header>

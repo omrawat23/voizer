@@ -14,7 +14,6 @@ export default function AgentPage() {
   const params = useParams()
   const agentId = parseInt(params.slug as string)
   
-  // Use the Zustand store
   const { selectedVoice, setSelectedVoice } = useAgentStore()
   
   const agent = agents.find(a => a.id === agentId)
