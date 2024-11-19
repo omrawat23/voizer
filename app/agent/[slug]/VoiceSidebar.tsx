@@ -7,21 +7,8 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { agents } from '@/constants/constants'
 import Image from 'next/image'
-import Retell from 'retell-sdk'
-
-const client = new Retell({
-  apiKey: 'key_f966764f83ad65bb8fbd60dd9988',
-})
-
-interface Voice {
-  voice_id: string;
-  voice_name: string;
-  gender: string;
-  age: number;
-  accent: string;
-  avatar_url: string;
-  preview_audio_url: string;
-}
+import { fetchVoices } from '@/lib/api'
+import type { Voice } from '@/app/api/voices/route'
 
 export interface VoiceSidebarProps {
   selectedVoice: {
@@ -45,25 +32,20 @@ export default function VoiceSidebar({ selectedVoice, onVoiceSelect }: VoiceSide
   const agent = agents.find(a => a.id === agentId)
 
   useEffect(() => {
-    const fetchVoices = async () => {
+    const getVoices = async () => {
       try {
-        const voiceResponses = await client.voice.list()
-        const voicesByAccent = voiceResponses.reduce((acc: Record<string, Voice[]>, voice: Voice) => {
-          const accent = voice.accent || 'Unknown'
-          if (!acc[accent]) acc[accent] = []
-          acc[accent].push(voice)
-          return acc
-        }, {})
-        setVoices(voicesByAccent)
+        const voicesByAccent = await fetchVoices();
+        setVoices(voicesByAccent);
       } catch (error) {
-        console.error("Error fetching voices:", error)
+        console.error('Error fetching voices:', error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    fetchVoices()
-  }, [])
+    getVoices();
+  }, []);
+  
 
   const handlePlayPause = (voiceId: string, previewAudioUrl: string) => {
     if (playingVoiceId === voiceId) {
