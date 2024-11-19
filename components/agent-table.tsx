@@ -147,7 +147,7 @@ export default function AgentTable() {
                 <TableRow 
                   key={agent.id}
                   onClick={() => handleRowClick(agent.id)}
-                  className="cursor-pointer hover:bg-gray-400"
+                  className="cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800"
                 >
                   <TableCell className="font-medium">
                     <div className="flex items-center space-x-2">
