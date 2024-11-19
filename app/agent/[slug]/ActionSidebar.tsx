@@ -62,14 +62,14 @@ export default function ActionSidebar({ selectedVoice }: ActionSidebarProps) {
         <div className="p-4 space-y-4"> 
           <div className="grid grid-cols-2 gap-2"> 
             <Button 
-              variant={activeMode === 'call' ? 'default' : 'outline'} 
-              className="w-full"
+              variant={activeMode === 'call' ? 'light' : 'outline'} 
+              className="w-full "
               onClick={() => setActiveMode('call')}
             > 
               Test Call 
             </Button> 
             <Button 
-              variant={activeMode === 'chat' ? 'default' : 'outline'} 
+              variant={activeMode === 'chat' ? 'light' : 'outline'} 
               className="w-full"
               onClick={() => setActiveMode('chat')}
             > 
@@ -112,7 +112,7 @@ export default function ActionSidebar({ selectedVoice }: ActionSidebarProps) {
               <div className="space-y-2"> 
                 <Input id="caller-phone" placeholder="Enter Phone Number" /> 
               </div> 
-              <Button className="w-full"> 
+              <Button variant="light" className="w-full"> 
                 Call Me 
               </Button> 
             </div>
@@ -141,12 +141,13 @@ export default function ActionSidebar({ selectedVoice }: ActionSidebarProps) {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Type your message"
-                  className="flex-grow"
+                  className="flex-grow bg-gray-200"
                   onKeyPress={(e) => {
                     if (e.key === 'Enter') handleSendMessage()
                   }}
                 />
                 <Button 
+                 variant="light"
                   onClick={handleSendMessage}
                   disabled={!message.trim()}
                 >

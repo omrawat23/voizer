@@ -27,7 +27,7 @@ export default function AgentPage() {
   }
   
   return (
-    <div>
+    <div className='bg-gray-100 dark:bg-background'>
       <Navbar />
       <SidebarProvider>
         <AppSidebar 

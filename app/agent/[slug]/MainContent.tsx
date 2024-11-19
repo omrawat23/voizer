@@ -27,7 +27,7 @@ export default function MainContent() {
 
   return (
     <MaxWidthWrapper maxWidth="lg">
-      <div className="flex-1 overflow-auto p-4 ">
+      <div className="flex-1 overflow-auto p-4 bg-gray-100 dark:bg-background">
         <div className="space-y-4">
           <div>
             <Label htmlFor="name" className='text-lg font-bold'>Name</Label>

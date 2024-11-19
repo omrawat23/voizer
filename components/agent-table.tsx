@@ -42,7 +42,7 @@ export default function AgentTable() {
   const router = useRouter()
   const [searchTerm, setSearchTerm] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
-  const [rowsPerPage, setRowsPerPage] = useState(10)
+  const [rowsPerPage, setRowsPerPage] = useState(5)
   const [selectedStatus, setSelectedStatus] = useState<string>('')
   const [selectedRole, setSelectedRole] = useState<string>('')
   const [selectedRows, ] = useState<number[]>([])

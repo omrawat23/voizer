@@ -103,7 +103,7 @@ export default function VoiceSidebar({ selectedVoice, onVoiceSelect }: VoiceSide
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-500 dark:text-neutral-400" />
           <Input
             placeholder="Search Voice"
-            className="pl-9 bg-neutral-100 dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800"
+            className="pl-9 bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -138,11 +138,7 @@ export default function VoiceSidebar({ selectedVoice, onVoiceSelect }: VoiceSide
                       <span>{voice_name}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className={`px-2 py-0.5 rounded text-xs ${
-                        gender === 'female' 
-                          ? 'bg-pink-500/20 text-pink-600 dark:bg-pink-500/30 dark:text-pink-400' 
-                          : 'bg-blue-500/20 text-blue-600 dark:bg-blue-500/30 dark:text-blue-400'
-                      }`}>
+                      <span className={`px-2 py-0.5 rounded text-xs text-background bg-blue-600 dark:text-blue-400'`}>
                         {gender}
                       </span>
                       <button

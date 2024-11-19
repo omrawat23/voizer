@@ -25,7 +25,7 @@ export default function RootLayout({
         fontMono.variable
       )}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="relative flex min-h-screen flex-col">
             <main className="flex-1">{children}</main>
           </div>
