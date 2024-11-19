@@ -1,34 +1,33 @@
-Issue Overview
-1. List Agents API
+# Issue Overview
 
-    Endpoint: GET /list-agents
+## 1. List Agents API
 
-    Observation:
-    The API returned an empty array ([]) when attempting to fetch the list of agents.
-    Screenshot of the response:
-   
+- **Endpoint**: `GET /list-agents`
 
-    Workaround:
-    To proceed, I used dummy data for agents during testing and development.
+### Observation:
+The API returned an empty array (`[]`) when attempting to fetch the list of agents.
 
-3. Create Agent API
+### Screenshot of the Response:
+![List Agents Response](./public/listagent.png)
 
-    Endpoint: POST /create-agent
+### Workaround:
+To proceed, I used dummy data for agents during testing and development.
 
-    Observation:
-    The API returned a 400 Bad Request with the error message:
+---
 
-    {
-      "status": "error",
-      "message": "Invalid retell llm id."
-    }
+## 2. Create Agent API
 
-    Screenshot of the error:
+- **Endpoint**: `POST /create-agent`
 
-    Workaround:
-    Since the Create Agent API was not functional, I created an agent manually using the dummy data for further testing.
+### Observation:
+The API returned a `400 Bad Request` with the error message:
 
-Notes
+### Screenshot of the Response:
+![List Agents Response](./public/createagent.png)
 
-    Dummy data allowed testing of other features that depend on agents being available.
-    Further investigation is required to resolve the Invalid retell llm id error for the Create Agent API.
+```json
+{
+  "status": "error",
+  "message": "Invalid retell llm id."
+}
+
