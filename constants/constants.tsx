@@ -1,0 +1,23 @@
+export const agents = [
+    { id: 1, name: 'John Doe', email: 'john@example.com', status: 'Active', role: 'Sales', avatar: 'https://i.pravatar.cc/150?img=1' },
+    { id: 2, name: 'Jane Smith', email: 'jane@example.com', status: 'Inactive', role: 'Support', avatar: 'https://i.pravatar.cc/150?img=2' },
+    { id: 3, name: 'Bob Johnson', email: 'bob@example.com', status: 'Active', role: 'Marketing', avatar: 'https://i.pravatar.cc/150?img=3' },
+    { id: 4, name: 'Alice Brown', email: 'alice@example.com', status: 'Active', role: 'Sales', avatar: 'https://i.pravatar.cc/150?img=4' },
+    { id: 5, name: 'Charlie Davis', email: 'charlie@example.com', status: 'Inactive', role: 'Support', avatar: 'https://i.pravatar.cc/150?img=5' },
+    { id: 6, name: 'Eva White', email: 'eva@example.com', status: 'Active', role: 'Marketing', avatar: 'https://i.pravatar.cc/150?img=6' },
+    { id: 7, name: 'Frank Miller', email: 'frank@example.com', status: 'Active', role: 'Sales', avatar: 'https://i.pravatar.cc/150?img=7' },
+    { id: 8, name: 'Grace Lee', email: 'grace@example.com', status: 'Inactive', role: 'Support', avatar: 'https://i.pravatar.cc/150?img=8' },
+    { id: 9, name: 'Henry Wilson', email: 'henry@example.com', status: 'Active', role: 'Marketing', avatar: 'https://i.pravatar.cc/150?img=9' },
+    { id: 10, name: 'Ivy Taylor', email: 'ivy@example.com', status: 'Active', role: 'Sales', avatar: 'https://i.pravatar.cc/150?img=10' },
+    { id: 11, name: 'Jack Robinson', email: 'jack@example.com', status: 'Inactive', role: 'Support', avatar: 'https://i.pravatar.cc/150?img=11' },
+    { id: 12, name: 'Karen Moore', email: 'karen@example.com', status: 'Active', role: 'Marketing', avatar: 'https://i.pravatar.cc/150?img=12' },
+    { id: 13, name: 'Linda Harris', email: 'linda@example.com', status: 'Active', role: 'Finance', avatar: 'https://i.pravatar.cc/150?img=13' },
+    { id: 14, name: 'Michael Scott', email: 'michael@example.com', status: 'Inactive', role: 'HR', avatar: 'https://i.pravatar.cc/150?img=14' },
+    { id: 15, name: 'Rachel Green', email: 'rachel@example.com', status: 'Active', role: 'Design', avatar: 'https://i.pravatar.cc/150?img=15' },
+    { id: 16, name: 'Ross Geller', email: 'ross@example.com', status: 'Active', role: 'Research', avatar: 'https://i.pravatar.cc/150?img=16' },
+    { id: 17, name: 'Monica Bing', email: 'monica@example.com', status: 'Inactive', role: 'Operations', avatar: 'https://i.pravatar.cc/150?img=17' },
+    { id: 18, name: 'Phoebe Buffay', email: 'phoebe@example.com', status: 'Active', role: 'Marketing', avatar: 'https://i.pravatar.cc/150?img=18' },
+    { id: 19, name: 'Chandler Bing', email: 'chandler@example.com', status: 'Active', role: 'Sales', avatar: 'https://i.pravatar.cc/150?img=19' },
+    { id: 20, name: 'Joey Tribbiani', email: 'joey@example.com', status: 'Inactive', role: 'Entertainment', avatar: 'https://i.pravatar.cc/150?img=20' },
+  ];
+  
