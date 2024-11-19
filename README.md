@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Issue Overview
+1. List Agents API
 
-## Getting Started
+    Endpoint: GET /list-agents
 
-First, run the development server:
+    Observation:
+    The API returned an empty array ([]) when attempting to fetch the list of agents.
+    Screenshot of the response:
+   
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    Workaround:
+    To proceed, I used dummy data for agents during testing and development.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Create Agent API
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    Endpoint: POST /create-agent
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    Observation:
+    The API returned a 400 Bad Request with the error message:
 
-## Learn More
+    {
+      "status": "error",
+      "message": "Invalid retell llm id."
+    }
 
-To learn more about Next.js, take a look at the following resources:
+    Screenshot of the error:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Workaround:
+    Since the Create Agent API was not functional, I created an agent manually using the dummy data for further testing.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Notes
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    Dummy data allowed testing of other features that depend on agents being available.
+    Further investigation is required to resolve the Invalid retell llm id error for the Create Agent API.
