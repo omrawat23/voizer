@@ -11,7 +11,7 @@ export default function MainContent() {
   const { agentName, prompt, setAgentName, setPrompt } = useAgentStore()
   const [isSaving, setIsSaving] = React.useState(false)
 
-  // Auto-save function (now simplified due to Zustand's persistence)
+  // Auto-save function 
   const autoSave = () => {
     setIsSaving(true)
     setTimeout(() => {
